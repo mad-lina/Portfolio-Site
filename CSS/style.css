@@ -1,6 +1,6 @@
 :root {
   --primary-color: #fff;
-  --secondary-color: #lightgray;
+  --secondary-color: #F0F8FF;
   --linktext-color:#191970;
   --primary-button: #357b70;
   --secondary-button:#191970;
@@ -21,6 +21,7 @@ h1 {
 h2 {
   font-size: 24px;
   font-weight: var(--fontweight-header);
+  color:var(--primary-button);
 }
 
 h3 {
@@ -49,8 +50,8 @@ button, .button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var(--primary-button);
-  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primarytext-color);
   text-decoration: none;
   /*adds spacing to the button*/
   padding: 10px;
@@ -135,9 +136,10 @@ box-sizing: border-box;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
+  text-align:center;
 }
 .grid__item{
-  background-color:lightgray;
+  background-color:var(--secondary-color);
   width:auto;
   height:auto;
   margin:0px;
