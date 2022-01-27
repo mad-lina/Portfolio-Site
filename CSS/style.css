@@ -1,0 +1,211 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #lightgray;
+  --linktext-color:#191970;
+  --primary-button: #357b70;
+  --secondary-button:#191970;
+  --fontweight-header:700;
+}
+
+body {background-color: none;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+}
+h1 {
+  font-size: 30px;
+  font-weight: var(--fontweight-header);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--fontweight-header);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--fontweight-header);
+}
+
+a {
+  color: var(--linktext-color);
+}
+a:visited {
+  /* visited link */
+  color: var(--linktext-color);
+}
+a:hover, a:focus{
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+a:active {
+  /* selected link */
+  color: var(--primary-button);
+}
+button, .button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--primary-button);
+  color: var(--primary-color);
+  text-decoration: none;
+  /*adds spacing to the button*/
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, .3);
+  transition: .2s opacity;
+}
+button:hover, .button:hover, button:focus .button:focus{
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+.button__secondary {
+  background-color: var(--secondary-button);
+  color: var(--primary-color);
+}
+.navigation-list__item--active {
+  text-decoration: none;
+}
+*{
+box-sizing: border-box;
+}
+
+.profile-portrait{
+  float:left;
+  width: 250px;
+  margin-right: 40px;
+  /*should be a square image*/
+  height:auto;
+  border-radius: 50%;
+}
+
+.page-footer{
+  clear:both;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+.profile, .about, .work, .contact{
+  max-width:700px;
+  margin:0 auto;
+}
+.about{
+  text-align:center;
+}
+
+.page-header{
+  display:flex;
+  width:100%;
+  padding:20px;
+  justify-content: space-around;
+}
+.page-header_item{
+  flex:0 1 200px;
+}
+/*not working*/
+.page-header_item:last-child{
+  flex-grow:1;
+  text-align:right;
+
+}
+
+.navigation-list{
+  list-style-type:none;
+}
+.navigation-list li{
+  display:inline-block;
+  margin-left:15px;
+}
+
+/* start grid fallback */
+.grid__item {
+ display: inline-block;
+ width: 33%;
+}
+/* end grid fallback */
+@supports (display:grid){}
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.grid__item{
+  background-color:lightgray;
+  width:auto;
+  height:auto;
+  margin:0px;
+}
+
+/*Changing to start and end of last grid item
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+}*/
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+/*Animation on Berlin SVG*/
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
