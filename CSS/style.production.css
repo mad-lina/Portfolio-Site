@@ -5,6 +5,15 @@
 * Browsers: last 4 version
 */
 
+:root {
+  --primary-color: #fff;
+  --secondary-color: #F0F8FF;
+  --linktext-color:#191970;
+  --primary-button: #357b70;
+  --secondary-button:#191970;
+  --fontweight-header:700;
+}
+
 body {background-color: none;
       font-family: 'Lato', sans-serif;
       font-weight: 400;
@@ -13,25 +22,26 @@ body {background-color: none;
 }
 h1 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: var(--fontweight-header);
 }
 
 h2 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--fontweight-header);
+  color:var(--primary-button);
 }
 
 h3 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--fontweight-header);
 }
 
 a {
-  color: #191970;
+  color: var(--linktext-color);
 }
 a:visited {
   /* visited link */
-  color: #191970;
+  color: var(--linktext-color);
 }
 a:hover, a:focus{
   /* No underlining when hovering over a link */
@@ -39,34 +49,16 @@ a:hover, a:focus{
 }
 a:active {
   /* selected link */
-  color: #357b70;
+  color: var(--primary-button);
 }
-button {
+button, .button {
   /* overwrites browser defaults and resets the border */
   border: none;
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #357b70;
-  color: #fff;
-  text-decoration: none;
-  /*adds spacing to the button*/
-  padding: 10px;
-  border-radius: 3px;
-  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, .3);
-  -webkit-transition: .2s opacity;
-  -o-transition: .2s opacity;
-  transition: .2s opacity;
-}
-.button {
-  /* overwrites browser defaults and resets the border */
-  border: none;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #357b70;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--primarytext-color);
   text-decoration: none;
   /*adds spacing to the button*/
   padding: 10px;
@@ -84,8 +76,8 @@ button:hover, .button:hover, button:focus .button:focus{
   opacity: 0.8;
 }
 .button__secondary {
-  background-color: #191970;
-  color: #fff;
+  background-color: var(--secondary-button);
+  color: var(--primary-color);
 }
 .navigation-list__item--active {
   text-decoration: none;
@@ -168,9 +160,10 @@ button:hover, .button:hover, button:focus .button:focus{
   -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
+  text-align:center;
 }
 .grid__item{
-  background-color:lightgray;
+  background-color:var(--secondary-color);
   width:auto;
   height:auto;
   margin:0px;
