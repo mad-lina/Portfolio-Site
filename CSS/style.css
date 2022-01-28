@@ -1,7 +1,7 @@
 :root {
   --primary-color: #fff;
   --secondary-color: #F0F8FF;
-  --linktext-color:#191970;
+  --linktext-color:#008000/*#191970*/;
   --primary-button: #357b70;
   --secondary-button:#191970;
   --fontweight-header:700;
@@ -21,7 +21,7 @@ h1 {
 h2 {
   font-size: 24px;
   font-weight: var(--fontweight-header);
-  color:var(--primary-button);
+  color:var(--secondary-button);
 }
 
 h3 {
@@ -44,7 +44,7 @@ a:active {
   /* selected link */
   color: var(--primary-button);
 }
-button, .button {
+button, .button, .button_secondary {
   /* overwrites browser defaults and resets the border */
   border: none;
   /* takes the font from the outer container */
@@ -60,13 +60,13 @@ button, .button {
   border-bottom: 2px solid rgba(0, 0, 0, .3);
   transition: .2s opacity;
 }
-button:hover, .button:hover, button:focus .button:focus{
+button:hover, .button:hover, .button_secondary:hover, button:focus, .button:focus, .button_secondary:focus{
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
-.button__secondary {
+.button_secondary {
   background-color: var(--secondary-button);
   color: var(--primary-color);
 }
@@ -91,13 +91,12 @@ box-sizing: border-box;
   display:flex;
   flex-direction:column;
   text-align:center;
+  padding-top: 50px;
 }
 
 .profile, .about, .work, .contact{
   max-width:700px;
   margin:0 auto;
-}
-.about{
   text-align:center;
 }
 
@@ -135,7 +134,7 @@ box-sizing: border-box;
 .grid{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 15px;
   text-align:center;
 }
 .grid__item{
@@ -143,6 +142,7 @@ box-sizing: border-box;
   width:auto;
   height:auto;
   margin:0px;
+  padding: 15px;
 }
 
 /*Changing to start and end of last grid item

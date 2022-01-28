@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <!--CSS Link-->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -21,23 +21,22 @@
       <!--class is for changing styling on current page-->
       <ul role="menubar" class="navigation-list">
       <li role="presentation"><a href="index.html" role="menuitem"
-          class="navigation-list__item">Home</a></li>
+          class="navigation-list__item button">Home</a></li>
       <li role="presentation"><a href="about.html" role="menuitem"
-          class="navigation-list_item navigation-list__item--active">About Me</a></li>
+          class="navigation-list_item navigation-list__item--active button">About Me</a></li>
       <li role="presentation"><a href="work.html" role="menuitem"
-          class="navigation-list_item">Work</a></li>
+          class="navigation-list_item button">Work</a></li>
       <li role="presentation"><a href="contact.html" role="menuitem"
-          class="navigation-list_item">Contact</a></li>
+          class="navigation-list_item button">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main class="container about"> <!--Body-->
-    <h1>About</h1>
     <p>I graduated from Colorado School of Mines and majored in Applied Math and Statistics.<br>
        I currently am enrolled in the Full Stack Web Development course with Career Foundry.<br>
        I'm a singer-songwriter and just released my first EP.
        <a href="https://open.spotify.com/album/5udWqmL4QL79nC9JNYoMZ3" target="_blank">Listen on Spotify.</a><br>
-       I have two kittens and love Korean food.</p><br>
+       I have two kittens and love Korean food.</p>
     <!--Experience Table-->
     <!--Not using now, also would need to either center or align left
       <table>
@@ -67,7 +66,7 @@
       </tbody>
     </table>-->
 
-  <a href="files/cv.pdf" class="button" download target="_blank">Download my CV</a><br><br>
+  <button href="files/cv.pdf" class="button_secondary" download target="_blank">Download my CV</button><br><br>
 <!--Animation SVG-->
 
                 <svg id="about-picture" xmlns="http://www.w3.org/2000/svg" class="berlin-illustration" height="auto" viewBox="0 0 700 505" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -676,9 +675,8 @@
   <footer class="page-footer"> <!-- Footer -->
     <br><p>Find me on</p>
     <div class="social media">
-    <a href="https://github.com/mad-lina"><img src="img/github.svg" alt="Github"></a>
-    <a href="http://twitter.com"><img src="img/twitter.svg" alt="Twitter"></a>
-    <a href="http://linkedin.com"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://github.com/mad-lina" target="_blank"><img src="img/github.svg" alt="Github" ></a>
+      <a href="https://www.linkedin.com/in/madelina-ecclesia-6858a31a0/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a>
     </div>
   </footer>
 <script src="js/tota11y.min.js"></script>

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <!--CSS Link-->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -21,13 +21,13 @@
       <!--class is for changing styling on current page-->
       <ul role="menubar" class="navigation-list">
       <li role="presentation"><a href="index.html" role="menuitem"
-          class="navigation-list__item">Home</a></li>
+          class="navigation-list__item button">Home</a></li>
       <li role="presentation"><a href="about.html" role="menuitem"
-          class="navigation-list_item">About Me</a></li>
+          class="navigation-list_item button">About Me</a></li>
       <li role="presentation"><a href="work.html" role="menuitem"
-          class="navigation-list_item">Work</a></li>
+          class="navigation-list_item button">Work</a></li>
       <li role="presentation"><a href="contact.html" role="menuitem"
-          class="navigation-list_item navigation-list__item--active">Contact</a></li>
+          class="navigation-list_item navigation-list__item--active button">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -37,28 +37,27 @@
       <!--Contact Form-->
       <h1>Reach out!</h1>
       <form action="" method="post">
-          <label class="standard-label" for="contact-email">E-mail*:</label>
+          <label class="standard-label" for="contact-email">E-mail*:</label><br>
           <input type="email" id="contact-email" required><br>
 
-          <label class="standard-label" for="contact-telephone">Phone:</label>
+          <label class="standard-label" for="contact-telephone">Phone:</label><br>
           <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br>
 
-          <label class="standard-label" for="message">Message*: </label>
-          <textarea maxlength="240" id="message" required></textarea>
+          <label class="standard-label" for="message">Message*: </label><br>
+          <textarea maxlength="240" id="message" required></textarea><br>
 
-          <input type="submit" value="Send message" class="button__secondary">
+          <input type="submit" value="Send message" class="button_secondary">
           <br>*Inputs marked with an an asterisks are required.
         </form><br>
       <!--Button and Call to Action-->
-      <a href="mailto:madelina.ecclesia@gmail.com" class="button" download target="_blank">Email Me</a><br><br>
-      <a href="Tel:+7206726054" class="button" download target="_blank">Call Me at 720-672-6054</a><br><br>
+      <a href="mailto:madelina.ecclesia@gmail.com" download target="_blank">Email Me</a><br>
+      <a href="Tel:+7206726054" download target="_blank">Call Me at 720-672-6054</a><br><br>
   </main>
   <footer class="page-footer"> <!-- Footer -->
     <p>Find me on</p>
     <div class="social media">
-    <a href="https://github.com/mad-lina"><img src="img/github.svg" alt="Github"></a>
-    <a href="http://twitter.com"><img src="img/twitter.svg" alt="Twitter"></a>
-    <a href="http://linkedin.com"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://github.com/mad-lina" target="_blank"><img src="img/github.svg" alt="Github" ></a>
+      <a href="https://www.linkedin.com/in/madelina-ecclesia-6858a31a0/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a>
     </div>
   </footer>
 <script src="js/tota11y.min.js"></script>
