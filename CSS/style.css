@@ -7,7 +7,7 @@
   --fontweight-header:700;
 }
 
-body {background-color: none;
+body {background-color: var(--primary-color);
       font-family: 'Lato', sans-serif;
       font-weight: 400;
       font-size: 16px;
@@ -51,7 +51,7 @@ button, .button, .button_secondary {
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   background-color: var(--secondary-color);
-  color: var(--primarytext-color);
+  color: var(--linktext-color);
   text-decoration: none;
   /*adds spacing to the button*/
   padding: 10px;
@@ -68,7 +68,6 @@ button:hover, .button:hover, .button_secondary:hover, button:focus, .button:focu
 }
 .button_secondary {
   background-color: var(--secondary-button);
-  color: var(--primary-color);
 }
 .navigation-list__item--active {
   text-decoration: none;
