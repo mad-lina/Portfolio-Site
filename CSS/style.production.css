@@ -200,7 +200,7 @@ button:hover, .button:hover, .button_secondary:hover, button:focus, .button:focu
   }
 }
 /*Animation on Berlin SVG*/
-stylelint-disable{
+stylelint-disable(
 @-webkit-keyframes color-change {
   0% {
     fill: #edc655;
@@ -222,7 +222,7 @@ stylelint-disable{
   100% {
     fill: #f76414;
   }
-}}
+})
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
           animation: 4s color-change infinite alternate linear;
